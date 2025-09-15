@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-# Alternative utilisant netstat pour les systèmes plus anciens.
-netstat -tulnp
+# Displays listening TCP and UDP ports with the PID and program name.
+# Filters output to show only TCP/UDP ports (no UNIX sockets).
+netstat -lp
