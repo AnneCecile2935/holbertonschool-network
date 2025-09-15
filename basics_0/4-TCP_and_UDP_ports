@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Displays listening ports with the PID and program name.
+# Uses `ss` (modern tool) or `netstat` (older tool) to list listening sockets.
+# Filters to show only TCP/UDP listening ports, along with the PID and program name.
+
+echo "Listening ports (TCP/UDP):"
+echo "--------------------------"
+ss -tulnp
