@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #Fix typo in IP_ADDRESS variable and complete ping script
 
 if [ "$#" -ne 1 ]; then
