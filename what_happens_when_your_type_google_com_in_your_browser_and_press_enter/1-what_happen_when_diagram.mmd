@@ -1,0 +1,25 @@
+flowchart TD
+    %% Nodes avec texte visible
+    A[You Laptop]
+    B[DNS Cloud]
+    C[Your Computer]
+    D[Google Server Port 443]
+    E[Firewall]
+    F[HTTPS/SSL Encryption]
+    G[Load Balancer]
+    H[Application Server]
+    I[Database]
+
+    %% Connexions avec labels
+    A -->|"What's google.com's IP?"| B
+    B --> C
+    C -->|"SYN"| D
+    D -->|"SYN-ACK"| C
+    C -->|"ACK"| D
+    D -->|"Request"| E
+    E -->|"Secure Connection"| F
+    F -->|"Encrypted Request"| G
+    G -->|"Route to Server"| H
+    H -->|"Query Data"| I
+    I -->|"Return Data"| H
+    H -->|"Page loads!"| A
